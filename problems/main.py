@@ -5,7 +5,6 @@ def callProblem():
     while not impStr:
         ans = input("Insert the difficulty of the problem (e, m h) >> ").lower()
 
-
         if ans == 'e':
             impStr = "easy."
 
@@ -22,8 +21,7 @@ def callProblem():
         __import__(f"{impStr}problem{int(impStr2)}")
 
     except Exception as err:
-        print("Program has encountered an error.\n"
-              "Most likely it is due to a non existing problem in this project.")
+        print("Program has encountered an error:\n")
         print(err)
 
 
